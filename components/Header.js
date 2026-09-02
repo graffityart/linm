@@ -5,8 +5,17 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand brand-logo" aria-label="몽땅 다이아 홈">
-          <img src="/images/brand/linm-logo.png" alt="린M 몽땅 다이아" />
+        <Link
+          href="/"
+          className="brand brand-logo"
+          aria-label="몽땅 다이아 홈"
+          style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}
+        >
+          <img
+            src="/images/brand/linm-logo.png"
+            alt="린M 몽땅 다이아"
+            style={{ display: 'block', width: 'auto', height: '52px', maxWidth: '220px', objectFit: 'contain' }}
+          />
         </Link>
         <nav className="main-nav" aria-label="주요 메뉴">
           <Link href="/rinm">린M</Link>
