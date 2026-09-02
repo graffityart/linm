@@ -4,7 +4,8 @@ import { siteInfo } from '../../data/site';
 
 export const metadata={
   title:'린M 구매 문의 | 몽땅 다이아',
-  description:'린M 충전 상품을 선택하고 서버·캐릭터 정보를 정리한 뒤 몽땅 다이아 카카오톡으로 빠르게 구매 문의할 수 있습니다.'
+  description:'린M 충전 상품을 선택하고 서버·캐릭터 정보를 정리한 뒤 몽땅 다이아 카카오톡으로 빠르게 구매 문의할 수 있습니다.',
+  robots:{index:false,follow:true}
 };
 
 export default function OrderPage(){return <>
