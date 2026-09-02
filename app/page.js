@@ -1,45 +1,11 @@
 import Link from 'next/link';
 import { siteInfo } from '../data/site';
 
-export default function HomePage() {
-  return (
-    <>
-      <section className="hero hero-home">
-        <div className="container hero-copy">
-          <span className="eyebrow">린M 전문 할인 충전</span>
-          <h1>린M 충전부터 아이템 정보까지<br />몽땅 다이아에서 한 번에</h1>
-          <p>실제 게임 상점 구조와 공식 자료를 기준으로 린M 충전, 다이아, 할인 상품, 아이템과 공략 정보를 정리합니다.</p>
-          <div className="hero-actions">
-            <Link className="btn primary" href="/rinm/charge">린M 충전 보기</Link>
-            <a className="btn secondary" href={siteInfo.kakaoUrl} target="_blank" rel="noreferrer">카카오톡 문의</a>
-          </div>
-        </div>
-        <div className="image-slot hero-image-slot" aria-label="메인 히어로 이미지 자리">
-          <span>/public/images/home/hero.webp</span>
-        </div>
-      </section>
+const quick=[['린M 충전','/rinm/charge','충전 단위·정상가·할인 문의'],['린M 할인','/rinm/discount','할인 구매 전 확인사항'],['린M 다이아','/rinm/diamond','다이아·귀속 다이아·린M 코인'],['린M 패키지','/rinm/package','패키지·한정 할인 정보'],['린M 아이템','/rinm/items','상점 아이템·재화'],['린M 신격','/rinm/guide/shingyeok','신격 추천·조합·티어·계승'],['린M 초보','/rinm/guide/beginner','처음 시작하는 이용자 가이드'],['린M 게임정보','/rinm/news','공지·업데이트·이벤트']];
 
-      <section className="section container">
-        <div className="section-head">
-          <span className="eyebrow">주요 서비스</span>
-          <h2>린M에서 많이 찾는 정보를 빠르게</h2>
-        </div>
-        <div className="card-grid four">
-          <Link className="feature-card" href="/rinm/charge"><h3>린M 충전</h3><p>충전 상품, 가격, 할인 정보를 확인합니다.</p></Link>
-          <Link className="feature-card" href="/rinm/items"><h3>린M 아이템</h3><p>실제 상점 아이템과 재화 정보를 정리합니다.</p></Link>
-          <Link className="feature-card" href="/rinm/guide"><h3>린M 공략</h3><p>초보, 육성, 장비와 콘텐츠 공략을 제공합니다.</p></Link>
-          <Link className="feature-card" href="/rinm/news"><h3>린M 게임정보</h3><p>공지, 업데이트, 이벤트 정보를 확인합니다.</p></Link>
-        </div>
-      </section>
-
-      <section className="section container split-section">
-        <div className="image-slot content-image-slot"><span>/public/images/home/store.webp</span></div>
-        <div>
-          <span className="eyebrow">실제 상점 기반</span>
-          <h2>게임 화면과 실제 명칭을 기준으로 구성</h2>
-          <p>신기석, 탈것 영혼, 날개 광휘, 마법석, 미네랄 등 확인된 린M 용어를 중심으로 페이지를 확장할 예정입니다.</p>
-        </div>
-      </section>
-    </>
-  );
-}
+export default function HomePage(){return <>
+<section className="hero hero-home"><div className="container hero-copy"><span className="eyebrow">린M 전문 할인 충전</span><h1>린M 충전과 게임정보를<br/>몽땅 다이아에서 한 번에</h1><p>실제 게임 상점 화면과 공식 자료를 기준으로 충전·다이아·아이템·공략 정보를 정리하고 구매 상담까지 빠르게 연결합니다.</p><div className="hero-actions"><Link className="btn primary" href="/rinm/charge">린M 충전 가격 보기</Link><a className="btn secondary" href={siteInfo.kakaoUrl} target="_blank" rel="noreferrer">카카오톡 {siteInfo.kakaoId}</a></div></div><div className="image-slot hero-image-slot"><span>/public/images/home/hero.webp</span></div></section>
+<section className="section container"><div className="section-head"><span className="eyebrow">린M 바로가기</span><h2>찾는 정보부터 바로 확인하세요</h2></div><div className="card-grid four">{quick.map(([t,h,d])=><Link className="feature-card" href={h} key={h}><h3>{t}</h3><p>{d}</p></Link>)}</div></section>
+<section className="section container split-section"><div><span className="eyebrow">충전 상담</span><h2>상품 확인 후 카카오톡으로 빠르게 문의</h2><p>몽땅 다이아의 실제 할인 판매가는 판매 정책 확정 후 페이지에 반영합니다. 현재는 공식 상점 정상가와 확인된 충전 구조를 먼저 제공하며 구매 문의는 카카오톡과 전화로 연결합니다.</p><div className="hero-actions"><a className="btn primary" href={siteInfo.kakaoUrl} target="_blank" rel="noreferrer">카카오톡 문의</a><a className="btn secondary" href={`tel:${siteInfo.phone.replaceAll('-','')}`}>{siteInfo.phone}</a></div></div><div className="image-slot content-image-slot"><span>/public/images/home/charge.webp</span></div></section>
+<section className="section container split-section"><div className="image-slot content-image-slot"><span>/public/images/home/store.webp</span></div><div><span className="eyebrow">실제 게임 자료 기반</span><h2>리니지M이 아닌 ‘린M’ 정보만 분리</h2><p>신기석, 탈것 영혼, 날개 광휘, 마법석, 미네랄 등 직접 확인된 린M 명칭을 사용합니다. 다른 게임의 정보를 섞거나 확인되지 않은 수치를 임의로 채우지 않습니다.</p><Link className="text-link" href="/rinm">린M 전체 정보 보기 →</Link></div></section>
+</>}
