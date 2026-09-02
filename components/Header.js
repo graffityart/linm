@@ -9,6 +9,8 @@ export default function Header() {
         <nav className="main-nav" aria-label="주요 메뉴">
           <Link href="/rinm">린M</Link>
           <Link href="/rinm/charge">충전</Link>
+          <Link href="/rinm/discount">할인</Link>
+          <Link href="/rinm/package">패키지</Link>
           <Link href="/rinm/items">아이템</Link>
           <Link href="/rinm/guide">공략</Link>
           <Link href="/rinm/news">게임정보</Link>
