@@ -1,7 +1,7 @@
 import { siteInfo } from '../data/site';
 
 export default function JsonLd(){
-  const baseUrl=process.env.NEXT_PUBLIC_SITE_URL || 'https://linm.vercel.app';
+  const baseUrl=process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aeonsoft.co.kr';
   const data={
     '@context':'https://schema.org','@graph':[
       {'@type':'WebSite','@id':`${baseUrl}/#website`,url:baseUrl,name:siteInfo.brand,inLanguage:'ko-KR'},
