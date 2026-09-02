@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteInfo } from '../../../data/site';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
+import SiteImage from '../../../components/SiteImage';
 
 export const metadata = {
   title: '린M 할인 충전 안내',
@@ -22,7 +23,7 @@ export default function DiscountPage() {
             <a className="btn secondary" href={siteInfo.kakaoUrl} target="_blank" rel="noreferrer">카카오톡 할인 문의</a>
           </div>
         </div>
-        <div className="image-slot"><span>/public/images/discount/hero.webp</span></div>
+        <SiteImage src="/images/discount/discount-hero.webp" alt="린M 할인 충전 대표 이미지" priority/>
       </section>
 
       <section className="section container">
@@ -36,7 +37,7 @@ export default function DiscountPage() {
       </section>
 
       <section className="section container split-section">
-        <div className="image-slot content-image-slot"><span>/public/images/discount/content-01.webp</span></div>
+        <SiteImage className="content-image-slot" src="/images/discount/discount-content-01.webp" alt="린M 할인 가격 비교 이미지"/>
         <div>
           <span className="eyebrow">비교 기준</span>
           <h2>정상가 → 판매가 → 절감 금액 순서로 표시</h2>
