@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { siteInfo } from '../../data/site';
 import BreadcrumbJsonLd from '../../components/BreadcrumbJsonLd';
+import SiteImage from '../../components/SiteImage';
 
 export const metadata = {
   title: '린M 종합정보·충전·아이템·공략',
@@ -36,7 +37,7 @@ export default function RinMPage() {
             <a className="btn secondary" href={siteInfo.kakaoUrl} target="_blank" rel="noreferrer">카카오톡 문의</a>
           </div>
         </div>
-        <div className="image-slot"><span>/public/images/home/rinm-hub.webp</span></div>
+        <SiteImage src="/images/home/home-rinm-hub.webp" alt="린M 종합 정보 허브 대표 이미지" priority/>
       </section>
 
       <section className="section container">
@@ -49,7 +50,7 @@ export default function RinMPage() {
       </section>
 
       <section className="section container split-section">
-        <div className="image-slot content-image-slot"><span>/public/images/home/rinm-info.webp</span></div>
+        <SiteImage className="content-image-slot" src="/images/home/home-rinm-info.webp" alt="린M 아이템과 재화 정보 이미지"/>
         <div>
           <span className="eyebrow">확인된 게임 용어</span>
           <h2>자료에 있는 명칭부터 정확하게 정리</h2>
