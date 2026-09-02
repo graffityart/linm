@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import FloatingContact from '../components/FloatingContact';
 import JsonLd from '../components/JsonLd';
 
-const baseUrl=process.env.NEXT_PUBLIC_SITE_URL || 'https://linm.vercel.app';
+const baseUrl=process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aeonsoft.co.kr';
 
 export const metadata = {
   metadataBase:new URL(baseUrl),
