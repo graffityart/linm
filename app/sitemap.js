@@ -5,10 +5,13 @@ export default function sitemap() {
     '/',
     '/rinm',
     '/rinm/charge',
+    '/rinm/discount',
+    '/rinm/package',
     '/rinm/diamond',
     '/rinm/items',
     '/rinm/guide',
     '/rinm/guide/charge',
+    '/rinm/guide/shingyeok',
     '/rinm/news',
   ];
 
