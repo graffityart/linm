@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { siteInfo } from '../data/site';
 
 export default function Footer() {
@@ -7,6 +8,11 @@ export default function Footer() {
         <div>
           <strong className="footer-brand">{siteInfo.brand}</strong>
           <p>린M 충전·아이템·게임정보 전문 안내</p>
+          <div className="footer-links">
+            <Link href="/privacy">개인정보처리방침</Link>
+            <Link href="/terms">이용약관</Link>
+            <Link href="/refund">환불·취소 안내</Link>
+          </div>
         </div>
         <div className="footer-info">
           <p><b>상호</b> {siteInfo.brand}</p>
