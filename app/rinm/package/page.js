@@ -1,43 +1,11 @@
-export const metadata = {
-  title: '린M 패키지 정보',
-  description: '린M 패키지와 한정 할인 상품을 실제 게임 상점 화면 기준으로 정리하는 몽땅 다이아 정보 페이지입니다.',
-};
-
-const packageTopics = [
-  ['한정 할인', '기간 한정 또는 할인 표시가 있는 상품을 실제 화면 기준으로 구분합니다.'],
-  ['재료 패키지', '성장·재료와 관련된 묶음 상품은 구성품을 확인한 뒤 별도 정리합니다.'],
-  ['특수 아이템', '특수 아이템 카테고리에서 확인되는 상품은 명칭과 용도를 분리해 설명합니다.'],
-];
-
-export default function PackagePage() {
-  return (
-    <>
-      <section className="subhero container">
-        <div>
-          <span className="eyebrow">린M 패키지</span>
-          <h1>린M 패키지와 한정 상품 정리</h1>
-          <p>현재 확보한 실제 상점 스크린샷에서 확인된 카테고리를 기준으로 구성합니다. 구체적인 패키지명과 구성품은 추가 화면 자료가 확보되는 즉시 세부 페이지로 확장합니다.</p>
-        </div>
-        <div className="image-slot"><span>/public/images/package/hero.webp</span></div>
-      </section>
-
-      <section className="section container">
-        <div className="section-head"><span className="eyebrow">상점 기준</span><h2>패키지 확인 시 볼 항목</h2></div>
-        <div className="card-grid three">
-          {packageTopics.map(([title, desc]) => (
-            <article className="feature-card" key={title}><h3>{title}</h3><p>{desc}</p></article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section container split-section">
-        <div className="image-slot content-image-slot"><span>/public/images/package/content-01.webp</span></div>
-        <div>
-          <span className="eyebrow">구성품 비교</span>
-          <h2>패키지는 가격보다 구성품 비교가 먼저</h2>
-          <p>동일 가격대라도 포함 재화와 성장 재료가 다를 수 있으므로 상품명, 가격, 포함 아이템, 구매 제한, 기간을 함께 비교하는 형태로 확장합니다.</p>
-        </div>
-      </section>
-    </>
-  );
-}
+import Link from 'next/link';
+import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
+export const metadata={title:'린M 패키지·한정 할인 상품 정보',description:'린M 상점에서 패키지와 한정 할인 상품을 확인할 때 가격, 구성품, 구매 제한, 기간을 비교하는 방법을 정리합니다.',alternates:{canonical:'/rinm/package'}};
+const checks=[['상품명','비슷한 패키지를 구분하려면 정확한 상품명을 먼저 확인합니다.'],['가격·요구 재화','원화 결제인지 게임 내 재화를 사용하는지 화면에서 확인합니다.'],['구성품','포함된 재화와 성장 재료의 종류·수량을 함께 비교합니다.'],['구매 제한','계정·캐릭터별 구매 횟수 제한이 표시되는지 확인합니다.'],['판매 기간','한정 상품은 시작·종료 시점을 확인해야 합니다.'],['추가 혜택','프로모션이나 첫 구매 혜택은 시점·계정 상태에 따라 달라질 수 있습니다.']];
+export default function PackagePage(){return <>
+<BreadcrumbJsonLd items={[{name:'홈',href:'/'},{name:'린M',href:'/rinm'},{name:'린M 패키지',href:'/rinm/package'}]}/>
+<section className="subhero container"><div><span className="eyebrow">린M 패키지</span><h1>린M 패키지는 구성품과 구매 조건을 함께 비교</h1><p>현재 자료에서 확인되지 않은 패키지명을 만들어 채우지 않고, 실제 상점의 한정 할인·재료·특수 아이템 분류를 기준으로 상세 자료가 들어올 자리를 구성합니다.</p></div><div className="image-slot"><span>/public/images/package/hero.webp</span></div></section>
+<section className="section container"><div className="section-head"><span className="eyebrow">패키지 체크리스트</span><h2>구매 전에 확인할 6가지</h2></div><div className="card-grid three">{checks.map(([t,d])=><article className="feature-card" key={t}><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+<section className="section container split-section"><div className="image-slot content-image-slot"><span>/public/images/package/content-01.webp</span></div><div><span className="eyebrow">현재 확인된 상점 구조</span><h2>한정 할인·재료·특수 아이템을 분리해서 확인</h2><p>제공받은 게임 화면에는 한정 할인, 재료, 특수 아이템 등의 상점 분류가 확인됩니다. 실제 패키지 상세 화면이 추가되면 상품별 구성품과 기간을 표 형태로 비교하도록 확장합니다.</p><Link className="text-link" href="/rinm/items">린M 아이템 정보 →</Link><br/><Link className="text-link" href="/rinm/discount">린M 할인 안내 →</Link></div></section>
+<p className="notice-box container">※ 현재 확보 자료만으로 특정 패키지의 효율이나 추천 순위를 판단할 근거는 부족하므로 임의의 추천·티어는 표시하지 않습니다.</p>
+</>}
