@@ -1,13 +1,11 @@
 import Link from 'next/link';
-
-export const metadata = {
-  title: '린M 육성 가이드 | 성장 재화와 아이템',
-  description: '린M 육성에 관련된 성장 재화와 아이템을 실제 확인된 명칭 중심으로 정리합니다. 세부 효과와 효율은 자료 확인 후 확장합니다.',
-};
-
-const materials=['신기석','공명 제련 수정','구슬 수정','홀리 수정','황금 수정','성물 수정','성석 가루','돌파석','마법석'];
+import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
+export const metadata={title:'린M 육성 가이드 | 성장 재료·돌파석·마법석',description:'린M 육성 관련 신기석, 수정류, 성석 가루, 돌파석, 마법석 등 실제 확인된 성장 아이템을 분류하고 추가 공략에 필요한 자료를 안내합니다.',alternates:{canonical:'/rinm/guide/growth'}};
+const groups=[['성장·제련 관련',['신기석','공명 제련 수정','구슬 수정','홀리 수정','황금 수정','성물 수정','성석 가루']],['이벤트에서 확인된 성장 보상',['1급 돌파석','2레벨 마법석 상자','골드']],['추가 확인이 필요한 정보',['각 재료의 사용처','필요 수량','획득처','레벨별 우선순위','성장 단계별 효율']]];
 export default function GrowthPage(){return <>
-<section className="subhero container"><div><span className="eyebrow">린M 육성</span><h1>린M 성장에 쓰이는 재화와 아이템 정리</h1><p>현재 확보한 상점·이벤트 자료에서 실제로 확인된 명칭을 중심으로 육성 정보를 구성합니다. 확인되지 않은 효율이나 추천 수치는 임의로 작성하지 않습니다.</p></div><div className="image-slot"><span>/public/images/guide/growth-hero.webp</span></div></section>
-<section className="section container"><div className="section-head"><span className="eyebrow">확인된 성장 관련 명칭</span><h2>육성 페이지의 기초 데이터</h2></div><ul className="keyword-list">{materials.map(x=><li key={x}>{x}</li>)}</ul><p className="notice-box">각 아이템의 정확한 효과·소모처·추천 우선순위는 추가 게임 화면 또는 공식 자료가 확보되는 순서대로 보강합니다.</p></section>
-<section className="section container split-section"><div className="image-slot content-image-slot"><span>/public/images/guide/growth-content.webp</span></div><div><span className="eyebrow">내부 연결</span><h2>아이템 정보와 함께 확인</h2><p>육성에 필요한 재료의 이름과 상점 분류는 아이템 허브에서 별도로 정리해 중복 내용을 줄였습니다.</p><Link className="text-link" href="/rinm/items">린M 아이템 정보 →</Link></div></section>
+<BreadcrumbJsonLd items={[{name:'홈',href:'/'},{name:'린M',href:'/rinm'},{name:'공략',href:'/rinm/guide'},{name:'육성',href:'/rinm/guide/growth'}]}/>
+<section className="subhero container"><div><span className="eyebrow">린M 육성</span><h1>성장 재료의 이름과 출처부터 구분</h1><p>현재 확보한 상점 스크린샷과 라운지 이벤트 자료에서 실제로 확인된 성장 관련 아이템만 정리합니다.</p></div><div className="image-slot"><span>/public/images/guide/growth-hero.webp</span></div></section>
+<section className="section container"><div className="section-head"><span className="eyebrow">육성 기초 데이터</span><h2>확인된 재료와 아직 필요한 정보</h2></div><div className="card-grid three">{groups.map(([t,items])=><article className="feature-card" key={t}><h3>{t}</h3><ul className="keyword-list">{items.map(x=><li key={x}>{x}</li>)}</ul></article>)}</div></section>
+<section className="section container"><div className="card-grid three"><article className="feature-card"><h3>상점 자료</h3><p>신기석과 수정류, 성석 가루 등 실제 상점 화면에서 확인된 명칭을 육성 재료 후보로 관리합니다.</p></article><article className="feature-card"><h3>이벤트 자료</h3><p>제공된 라운지 이벤트 게시글에서는 1급 돌파석 20개, 골드 50,000, 2레벨 마법석 상자 1개가 보상으로 안내되었습니다.</p></article><article className="feature-card"><h3>효율 판단은 보류</h3><p>사용 효과와 필요 수량이 확인되지 않은 상태에서는 어떤 재료를 먼저 써야 하는지 임의로 추천하지 않습니다.</p></article></div></section>
+<section className="section container split-section"><div className="image-slot content-image-slot"><span>/public/images/guide/growth-content.webp</span></div><div><span className="eyebrow">다음 자료</span><h2>캐릭터 성장·재료 사용 화면이 필요합니다</h2><p>성장 메뉴, 재료 사용처, 요구 수량이 보이는 화면이 확보되면 초반·중반·후반 육성 순서로 세분화할 수 있습니다.</p><Link className="text-link" href="/rinm/items">린M 아이템 전체 보기 →</Link></div></section>
 </>}
