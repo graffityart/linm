@@ -1,5 +1,5 @@
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
-export const metadata={title:'린M 콘텐츠 공략 허브 | 세부 콘텐츠 자료 정리',description:'린M 콘텐츠 공략을 위한 허브입니다. 루비 광차, 배틀로얄, PVP, 공성전, 클래스 대전은 초기 키워드 후보로 관리하며 실제 게임 자료 확인 후 상세 공략으로 확장합니다.',alternates:{canonical:'/rinm/guide/content'}};
+export const metadata={title:'린M 콘텐츠 공략·게임 가이드',description:'린M 주요 콘텐츠의 참여 조건과 진행 방식, 보상 등 확인된 게임 정보를 중심으로 공략 자료를 정리합니다. 관련 상품은 서버 조건에 따라 최소 20%부터 최대 25%까지 할인 판매가를 확인할 수 있습니다.',keywords:['린M','린M 콘텐츠 공략'],alternates:{canonical:'/rinm/guide/content'}};
 const candidates=['루비 광차','배틀로얄','PVP','공성전','클래스 대전'];
 const needed=['콘텐츠 메뉴 전체 화면','각 콘텐츠 입장 화면','참여 조건·입장 횟수','보상 목록 화면','플레이 규칙·승리 조건','관련 공식 업데이트'];
 export default function ContentGuide(){return <>
