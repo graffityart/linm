@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import SiteImage from '../../../../components/SiteImage';
-export const metadata={title:'린M 장비 가이드 | 제련 수정·축복 오일·펫 장비',description:'린M 장비 관련 공명 제련 수정, 구슬·홀리·황금·성물 수정, 홀리웨폰 축복 오일, 펫 장비 조각 등 실제 확인된 아이템을 정리합니다.',alternates:{canonical:'/rinm/guide/equipment'}};
+export const metadata={title:'린M 장비·제련·장비 재료 가이드',description:'린M 장비와 제련에 관련된 수정류, 축복 오일, 펫 장비 조각 등 확인된 재료와 장비 정보를 안내합니다. 구매 가능 상품은 서버별로 최소 20%부터 최대 25%까지 할인 조건이 적용됩니다.',keywords:['린M','린M 장비'],alternates:{canonical:'/rinm/guide/equipment'}};
 const items=['공명 제련 수정','구슬 수정','홀리 수정','황금 수정','성물 수정','홀리웨폰 축복 오일','펫 장비 조각'];
 const needed=['캐릭터 장비 슬롯 화면','장비 상세 옵션 화면','강화 화면과 소모 재화','제련 화면과 사용 수정','펫 장비 상세 화면','강화·제련 관련 공식 안내'];
 export default function EquipmentPage(){return <>
