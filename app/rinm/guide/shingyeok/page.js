@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {siteInfo} from '../../../../data/site';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import SiteImage from '../../../../components/SiteImage';
-export const metadata={title:'린M 신격 공략 | 추천·조합·티어·계승 자료',description:'린M 신격 추천, 조합, 티어, 계승을 다루는 공략 허브입니다. 확인되지 않은 효과와 순위는 임의로 작성하지 않고 확보된 자료를 기준으로 확장합니다.',alternates:{canonical:'/rinm/guide/shingyeok'}};
+export const metadata={title:'린M 신격 공략·조합·계승 정보',description:'린M 신격의 추천, 조합, 티어와 계승 정보를 확인 가능한 게임 자료를 기준으로 정리합니다. 관련 상품 구매는 서버 조건에 따라 최소 20%부터 최대 25%까지 할인 안내를 받을 수 있습니다.',keywords:['린M','린M 신격'],alternates:{canonical:'/rinm/guide/shingyeok'}};
 const topics=[['신격 추천','추천을 만들려면 각 신격의 이름, 등급, 효과와 실제 사용 목적이 필요합니다.'],['신격 조합','조합 효과 또는 시너지 화면이 확보되어야 조합별 차이를 근거 있게 정리할 수 있습니다.'],['신격 티어','티어표에는 비교 기준과 패치 시점이 필요하므로 현재는 임의 순위를 만들지 않습니다.'],['신격 계승','계승 조건, 소모 재화, 결과 화면이 확보되면 단계별 가이드로 정리합니다.']];
 const needed=['신격 전체 목록 화면','각 신격 상세 효과 화면','신격 등급·성급 등 구분 화면','신격 조합 또는 편성 화면','신격 계승 화면과 필요 재화','신격 관련 공식 공지·업데이트'];
 export default function ShingyeokPage(){return <>
