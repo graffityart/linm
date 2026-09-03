@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import SiteImage from '../../../../components/SiteImage';
-export const metadata={title:'린M 초보 가이드 | 재화·상점·아이템 시작 순서',description:'린M 초보 이용자가 다이아, 귀속 다이아, 린M 코인과 상점 메뉴, 주요 아이템, 충전 정보를 어떤 순서로 확인하면 좋은지 실제 확보 자료 기준으로 정리합니다.',alternates:{canonical:'/rinm/guide/beginner'}};
+export const metadata={title:'린M 초보 가이드·상점·재화 안내',description:'린M을 처음 시작할 때 알아둘 재화, 상점 메뉴, 주요 아이템과 충전 확인 순서를 쉽게 정리했습니다. 구매 가능한 상품은 서버에 따라 최소 20%부터 최대 25%까지 할인됩니다.',keywords:['린M','린M 초보'],alternates:{canonical:'/rinm/guide/beginner'}};
 export default function BeginnerPage(){return <>
 <BreadcrumbJsonLd items={[{name:'홈',href:'/'},{name:'린M',href:'/rinm'},{name:'공략',href:'/rinm/guide'},{name:'초보',href:'/rinm/guide/beginner'}]}/>
 <section className="subhero container"><div><span className="eyebrow">린M 초보</span><h1>처음이라면 재화 → 상점 → 아이템 순서로</h1><p>복잡한 공략부터 외우기보다 현재 게임 화면에서 확인되는 기본 구조를 먼저 익히도록 구성했습니다.</p></div><SiteImage src="/images/guide/beginner-hero.webp" alt="린M 초보 모험 시작 이미지" priority/></section>
