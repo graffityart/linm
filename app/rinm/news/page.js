@@ -1,3 +1,5 @@
+import SiteImage from '../../../components/SiteImage';
+
 export const metadata = {
   title: '린M 공지·업데이트·이벤트 정보',
   description: '린M 공식 라운지 자료를 기준으로 공지, 업데이트, 이벤트, 쿠폰과 상점 프로모션 정보를 정리하는 페이지입니다.',
@@ -19,7 +21,7 @@ export default function NewsPage() {
           <h1>공지·업데이트·이벤트 한눈에</h1>
           <p>네이버 게임 린M 공식 라운지에서 확인한 내용을 기반으로 최신 정보 페이지를 구성합니다. 자동 복제하지 않고 핵심 내용을 요약·정리하는 방식으로 운영합니다.</p>
         </div>
-        <div className="image-slot"><span>/public/images/news/hero.webp</span></div>
+        <SiteImage className="image-slot" src="/images/news/news-hero.webp" alt="린M 공지 업데이트 이벤트 게임정보 대표 이미지" priority />
       </section>
 
       <section className="section container">
