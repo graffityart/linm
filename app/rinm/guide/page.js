@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {siteInfo} from '../../../data/site';
 import BreadcrumbJsonLd from '../../../components/BreadcrumbJsonLd';
 import SiteImage from '../../../components/SiteImage';
-export const metadata={title:'린M 공략 | 초보·육성·장비·신격·콘텐츠 가이드',description:'린M 초보, 육성, 장비, 신격, 콘텐츠와 충전 방법을 주제별로 분리한 몽땅 다이아 린M 공략 허브입니다.',alternates:{canonical:'/rinm/guide'}};
+export const metadata={title:'린M 공략·초보·육성·장비 가이드',description:'린M 초보부터 캐릭터 육성, 장비, 신격과 주요 콘텐츠까지 필요한 공략을 주제별로 찾아보세요. 관련 상품 구매 시 서버 조건에 따라 최소 20%부터 최대 25%까지 할인 안내를 제공합니다.',keywords:['린M','린M 공략'],alternates:{canonical:'/rinm/guide'}};
 const guides=[['초보 가이드','/rinm/guide/beginner','처음 시작할 때 재화·상점·아이템 구조부터 확인합니다.'],['육성 가이드','/rinm/guide/growth','확인된 성장 재화와 주요 성장 관련 아이템을 정리합니다.'],['장비 가이드','/rinm/guide/equipment','제련 수정, 축복 오일, 펫 장비 조각 등 장비 관련 명칭을 모읍니다.'],['신격 가이드','/rinm/guide/shingyeok','신격 추천·조합·티어·계승으로 확장하기 위한 독립 허브입니다.'],['콘텐츠 공략','/rinm/guide/content','루비 광차, 배틀로얄, PVP, 공성전, 클래스 대전을 주제별로 관리합니다.'],['충전 가이드','/rinm/guide/charge','서버·캐릭터 확인부터 게임 내 상점 → 충전 확인 흐름을 안내합니다.']];
 export default function GuidePage(){return <>
 <BreadcrumbJsonLd items={[{name:'홈',href:'/'},{name:'린M',href:'/rinm'},{name:'린M 공략',href:'/rinm/guide'}]}/>
