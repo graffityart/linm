@@ -10,7 +10,6 @@ const companyInfo = [
 ];
 
 const contactInfo = [
-  ['통신판매업신고', siteInfo.ecommerceReport],
   ['개인정보관리책임자', siteInfo.privacyOfficer],
   ['이메일', siteInfo.email],
   ['카카오톡', siteInfo.kakaoId],
@@ -26,7 +25,7 @@ export default function Footer() {
               <img src="/images/brand/linm-logo.png" alt="린M 몽땅 다이아" />
             </Link>
             <div>
-              <strong>{siteInfo.brand}</strong>
+              <strong>몽땅 다이아</strong>
               <p>린M 충전·아이템·게임정보 전문 안내</p>
             </div>
           </div>
@@ -76,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-v2-bottom">
-          <p>© {new Date().getFullYear()} {siteInfo.brand}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} 몽땅 다이아. All rights reserved.</p>
           <small>본 사이트는 린M 게임의 공식 사이트가 아니며, 게임 관련 상표 및 저작권은 각 권리자에게 있습니다.</small>
         </div>
       </div>
