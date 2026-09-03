@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import BreadcrumbJsonLd from '../../../../components/BreadcrumbJsonLd';
 import SiteImage from '../../../../components/SiteImage';
-export const metadata={title:'린M 육성 가이드 | 성장 재료·돌파석·마법석',description:'린M 육성 관련 신기석, 수정류, 성석 가루, 돌파석, 마법석 등 실제 확인된 성장 아이템을 분류하고 추가 공략에 필요한 자료를 안내합니다.',alternates:{canonical:'/rinm/guide/growth'}};
+export const metadata={title:'린M 육성 가이드·성장 재료 안내',description:'린M 캐릭터 성장에 사용되는 신기석, 수정류, 돌파석과 마법석 등 확인된 육성 재료를 정리합니다. 관련 상품은 서버·판매 조건에 따라 최소 20%부터 최대 25%까지 할인 안내합니다.',keywords:['린M','린M 육성'],alternates:{canonical:'/rinm/guide/growth'}};
 const groups=[['성장·제련 관련',['신기석','공명 제련 수정','구슬 수정','홀리 수정','황금 수정','성물 수정','성석 가루']],['이벤트에서 확인된 성장 보상',['1급 돌파석','2레벨 마법석 상자','골드']],['추가 확인이 필요한 정보',['각 재료의 사용처','필요 수량','획득처','레벨별 우선순위','성장 단계별 효율']]];
 export default function GrowthPage(){return <>
 <BreadcrumbJsonLd items={[{name:'홈',href:'/'},{name:'린M',href:'/rinm'},{name:'공략',href:'/rinm/guide'},{name:'육성',href:'/rinm/guide/growth'}]}/>
